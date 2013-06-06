@@ -103,7 +103,7 @@ a { text-decoration: none }
 img,
 fieldset { border: 0 none }
 legend {
-	font: italic 16px 'latoitalic', sans-serif;
+	font: 16px 'latoitalic', sans-serif;
 	text-transform: uppercase;
 }
 
@@ -155,12 +155,13 @@ legend {
 	width: 338px;
 	z-index: 80;
 
-	-webkit-transition: all .8s ease-out; 
-	   -moz-transition: all .8s ease-out; 
-		 -o-transition: all .8s ease-out; 
-			transition: all .8s ease-out; 
+	-webkit-transition: all 0.8s ease-out; 
+	   -moz-transition: all 0.8s ease-out; 
+		 -o-transition: all 0.8s ease-out; 
+			transition: all 0.8s ease-out; 
 }
-.banner:target { left: 216px }
+.banner:target,
+.banner.target { left: 216px }
 .anchor {
 	display: block;
 	height: 50px;
@@ -176,8 +177,10 @@ legend {
 	display: none;
 }
 .anchor-off { background: #666 url(img/left-right.png) no-repeat right center }
-.banner:target .anchor-on  { display: block }
-.banner:target .anchor-off { display: none }
+.banner:target .anchor-on,
+.banner.target .anchor-on  { display: block }
+.banner:target .anchor-off,
+.banner.target .anchor-off { display: none }
 
 /* Header */
 #logo { padding: 32px 0 46px 30px }
@@ -201,7 +204,8 @@ legend {
 }
 .menu-item a:hover,
 .menu-item a:focus,
-.menu-item a:active {
+.menu-item a:active,
+.current-menu-item a {
 	background: #666;
 	color: #fff;
 }
@@ -225,7 +229,15 @@ legend {
 	font: 14px/29px 'latoregular', sans-serif;
 	padding: 0 10px;
 	text-transform: uppercase;
+
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+		 -o-transition: all 0.3s ease-out; 
+			transition: all 0.3s ease-out; 
 }
+.store-link:hover,
+.store-link:focus,
+.store-link:active { background: #df6e1f }
 .social { padding: 10px 40px }
 .like {
 	float: right;
@@ -352,7 +364,7 @@ label,
 	border: 0 none;
 	color: #fff;
 	display: block;
-	font: italic 17px 'latoitalic', sans-serif;
+	font: 16px 'latoitalic', sans-serif;
 	margin: 0;
 	padding: 4px 6px 3px;
 	width: 400px;
@@ -374,13 +386,13 @@ label,
 	color: #fff;
 	cursor: pointer;
 	display: block;
-	font: italic 30px/43px 'latoitalic', sans-serif;
+	font: 30px/43px 'latoitalic', sans-serif;
 	padding: 0 10px;
 	text-transform: uppercase;
 }
 
 .address {
-	font: italic 16px/1.4em 'latoitalic', sans-serif;
+	font: 16px/1.4em 'latoitalic', sans-serif;
 	margin-bottom: 40px;
 }
 
